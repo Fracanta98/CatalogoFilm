@@ -10,7 +10,7 @@ public class Film{
    private String genere; 
 
 
-       
+        public Film(){} //costruttore vuoto
 
 
         public Film(int id, String titolo, String regista, int anno, String genere){
