@@ -22,5 +22,10 @@ public class CatalogoFilmService {
     }
     return Optional.empty(); // Nessun film trovato
     }
+
+    // Delete
+    public boolean deleteById(int id) {
+    return listaFilm.removeIf(f -> f.getId() == id);
+    }
     
 }
