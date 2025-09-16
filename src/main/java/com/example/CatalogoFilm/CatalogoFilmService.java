@@ -23,6 +23,13 @@ public class CatalogoFilmService {
     return Optional.empty(); // Nessun film trovato
     }
 
+    // Add film
+    public Film addFilm(Film f) {
+        f.setId(nextId++);
+        listaFilm.add(f);
+        return f;
+    }
+    
     // Delete
     public boolean deleteById(int id) {
     return listaFilm.removeIf(f -> f.getId() == id);
