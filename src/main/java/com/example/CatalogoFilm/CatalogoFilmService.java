@@ -34,5 +34,20 @@ public class CatalogoFilmService {
     public boolean deleteById(int id) {
     return listaFilm.removeIf(f -> f.getId() == id);
     }
+
+
     
+    public void aggiornaFilm(int id, Film f){ //funzione per aggiornare
+         for (Film a : listaFilm){
+            if(a.getId() == id){
+                a.setTitolo(f.getTitolo());
+                a.setGenere(f.getGenere());
+                a.setAnno(f.getAnno());
+                a.setRegista(f.getRegista());
+            }
+
+         }
+
+    
+    }
 }

@@ -32,7 +32,7 @@ public class Film{
         public void setId(int nuovoID){this.id = nuovoID;}
         public void setTitolo(String nuovoTitolo){this.titolo = nuovoTitolo;}
         public void setRegista(String nuovoRegista){this.regista = nuovoRegista;}
-        public void setanno(int nuovoAnno){this.anno = nuovoAnno;}
+        public void setAnno(int nuovoAnno){this.anno = nuovoAnno;}
         public void setGenere(String nuovoGenere){this.genere = nuovoGenere;}
 
 
