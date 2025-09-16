@@ -14,8 +14,8 @@ public class CatalogoFilmService {
         return listaFilm;
     }
 
-  public Optional<Film> getFilmById(int id) {
-    for (Film f : listaFilm) {
+  public Optional<Film> getFilmById(int id) {   //Optional perchè potrei non trovare niente e
+    for (Film f : listaFilm) {                  //ritornare un null
         if (f.getId() == id) {
             return Optional.of(f); // Film trovato
         }
