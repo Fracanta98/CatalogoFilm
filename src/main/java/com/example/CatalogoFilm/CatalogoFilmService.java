@@ -1,6 +1,6 @@
 package com.example.CatalogoFilm;
 import java.util.ArrayList;
-public class CatalogoFilm {
+public class CatalogoFilmService {
     ArrayList<Film> listaFilm = new ArrayList<>();
     
 }
