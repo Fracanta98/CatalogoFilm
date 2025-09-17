@@ -1,25 +1,9 @@
-// import java.lang.reflect.Array;
-// import java.util.ArrayList;
-// import java.util.List;
+package com.example.CatalogoFilm;
 
+import com.example.catalogofilm.model.Film;
+import com.example.catalogofilm.service.CatalogoFilmService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-
-// import org.springframework.stereotype.Controller;
-// import org.springframework.web.bind.annotation.PostMapping;
-// import org.springframework.web.bind.annotation.RequestBody;
-// import org.springframework.web.bind.annotation.RequestMapping;
-// import org.springframework.web.bind.annotation.RestController;
-
-// import com.example.CatalogoFilm.Film;
-// @RestController
-// @RequestMapping("/api")
-  
-
-// public class ControllerFilm {
-//     @PostMapping("/inserimento")
-//     public ArrayList<Film> postFilm(@RequestBody Film f){
-//         new listaFilm.save(f);
-//         return new listaFilm.findAll();
-//     }
-
-// }
+import java.util.List;
