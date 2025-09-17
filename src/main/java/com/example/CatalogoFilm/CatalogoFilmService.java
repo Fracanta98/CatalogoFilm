@@ -7,7 +7,10 @@ import java.util.Optional;
 
 public class CatalogoFilmService {
    
-     private final List<Film> listaFilm = new ArrayList<>();
+    private List<Film> listaFilm = new ArrayList<>();
+    public  List<Film> getListaFilm(){
+        return listaFilm;
+    }
     private int nextId = 1; //contatore degli id che parte da 1
 
     public List<Film> getAllFilms() { //metodo per vedere tutti i film disponibili
