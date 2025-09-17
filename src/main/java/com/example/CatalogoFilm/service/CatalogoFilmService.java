@@ -33,9 +33,10 @@ public class CatalogoFilmService {
         return f;
     }
     
-    // Delete
-    public boolean deleteById(int id) {
-    return listaFilm.removeIf(f -> f.getId() == id);
+    public Optional<Film> deleteById(int id) { //delete
+        Optional<Film> film = getFilmById(id);
+        film.ifPresent(listaFilm::remove);
+        return film;
     }
 
 
