@@ -1,4 +1,4 @@
-package com.example.CatalogoFilm;
+package com.example.catalogofilm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

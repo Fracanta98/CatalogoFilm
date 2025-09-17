@@ -1,4 +1,4 @@
-package com.example.CatalogoFilm.controller;
+package com.example.catalogofilm.controller;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.CatalogoFilm.models.Film;
-import com.example.CatalogoFilm.service.CatalogoFilmService;
+import com.example.catalogofilm.models.*;
+import com.example.catalogofilm.service.*;
 
 
 @RestController
