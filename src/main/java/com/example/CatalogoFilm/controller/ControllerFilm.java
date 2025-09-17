@@ -39,7 +39,7 @@ public class ControllerFilm {
         return service.getAllFilms();
     }
 
-      @PutMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<String> updateFilm(@PathVariable int id, @RequestBody Film film) {
         boolean filmAggiornato = service.aggiornaFilm(id, film);
         if (filmAggiornato == true) 
@@ -53,5 +53,7 @@ public class ControllerFilm {
                   .map(film -> ResponseEntity.ok(film)) 
                   .orElse(ResponseEntity.notFound().build());
 
-}
+    }
+
+
 }
