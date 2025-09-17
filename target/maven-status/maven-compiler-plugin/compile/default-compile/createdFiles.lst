@@ -1,0 +1,4 @@
+com\example\catalogofilm\models\Film.class
+com\example\catalogofilm\service\CatalogoFilmService.class
+com\example\catalogofilm\CatalogoFilmApplication.class
+com\example\catalogofilm\controller\ControllerFilm.class
