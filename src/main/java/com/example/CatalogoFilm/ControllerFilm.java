@@ -20,7 +20,7 @@ public class ControllerFilm {
     }
 
     // metodo POST 
-    @PostMapping
+    @PostMapping("/aggiungi")
     public ResponseEntity<Film> postFilm (@RequestBody Film film){
         Film filmCreato = service.addFilm(film);
         return ResponseEntity.ok().body(filmCreato);
