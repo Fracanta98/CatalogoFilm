@@ -1,9 +1,7 @@
-package com.example.catalogofilm.models;
+package com.example.catalogo.models;
 
-
-
-public class Film{
-   private int id; 
+public class Film {
+    private int id; 
    private String titolo;
    private String regista; 
    private int anno; 
@@ -46,5 +44,5 @@ public class Film{
                     ", genere: '" + genere + '\'' +
                     '}';
     }
-
+    
 }

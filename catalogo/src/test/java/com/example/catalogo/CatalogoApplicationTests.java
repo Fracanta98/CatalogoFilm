@@ -1,10 +1,10 @@
-package com.example.CatalogoFilm;
+package com.example.catalogo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CatalogoFilmApplicationTests {
+class CatalogoApplicationTests {
 
 	@Test
 	void contextLoads() {

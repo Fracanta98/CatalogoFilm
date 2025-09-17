@@ -1,4 +1,4 @@
-package com.example.catalogofilm.controller;
+package com.example.catalogo.controller;
 
 import java.util.List;
 
@@ -12,15 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.catalogofilm.models.*;
-import com.example.catalogofilm.service.*;
-
+import com.example.catalogo.models.Film;
+import com.example.catalogo.service.CatalogoFilmService;
 
 @RestController
 @RequestMapping("/api")
-
 public class ControllerFilm {
-    
+     
     //creazione oggetto service e sua accesso tramite metodo public
     private final CatalogoFilmService service;
 
@@ -62,4 +60,5 @@ public class ControllerFilm {
                   .map(ResponseEntity::ok)
                   .orElse(ResponseEntity.notFound().build());
 }
+    
 }

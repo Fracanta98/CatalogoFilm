@@ -1,15 +1,13 @@
-package com.example.catalogofilm.service;
+package com.example.catalogo.service;
+import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.catalogofilm.models.*;
-
-
-
+import com.example.catalogo.models.Film;
+@Service
 public class CatalogoFilmService {
-   
-    private final List<Film> listaFilm = new ArrayList<>();
+     private final List<Film> listaFilm = new ArrayList<>();
     
     private int nextId = 1; //contatore degli id che parte da 1
 
@@ -64,4 +62,5 @@ public class CatalogoFilmService {
       }
       return null; // se non trova nessun film
 }
+    
 }
