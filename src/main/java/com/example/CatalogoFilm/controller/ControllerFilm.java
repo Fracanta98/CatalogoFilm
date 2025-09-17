@@ -1,13 +1,18 @@
 package com.example.CatalogoFilm.controller;
 
-import com.example.CatalogoFilm.models.Film;
-import com.example.CatalogoFilm.service.CatalogoFilmService;
-
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.CatalogoFilm.models.Film;
+import com.example.CatalogoFilm.service.CatalogoFilmService;
 
 
 @RestController
@@ -42,4 +47,11 @@ public class ControllerFilm {
         return ResponseEntity.notFound().build();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Film> getById(@PathVariable int id) {
+    return service.getFilmById(id)
+                  .map(film -> ResponseEntity.ok(film)) 
+                  .orElse(ResponseEntity.notFound().build());
+
+}
 }
