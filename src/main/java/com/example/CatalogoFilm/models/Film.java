@@ -1,4 +1,4 @@
-package com.example.CatalogoFilm;
+package com.example.CatalogoFilm.models;
 
 
 

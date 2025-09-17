@@ -1,7 +1,8 @@
-package com.example.CatalogoFilm;
+package com.example.CatalogoFilm.controller;
 
-import com.example.CatalogoFilm.Film;
-import com.example.CatalogoFilm.CatalogoFilmService;
+import com.example.CatalogoFilm.models.Film;
+import com.example.CatalogoFilm.service.CatalogoFilmService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
