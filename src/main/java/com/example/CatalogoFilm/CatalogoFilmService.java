@@ -50,4 +50,13 @@ public class CatalogoFilmService {
 
     
     }
+
+    public Film getByTitolo(String tit) {   // Ricerca per titolo
+      for (Film f : listaFilm) {
+          if (f.getTitolo().equalsIgnoreCase(tit)) {
+              return f; 
+          }
+      }
+      return null; // se non trova nessun film
+}
 }
