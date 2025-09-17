@@ -33,4 +33,13 @@ public class ControllerFilm {
     public List<Film> getAllFilms() {
         return service.getAllFilms();
     }
+
+      @PutMapping("/{id}")
+    public ResponseEntity<String> updateFilm(@PathVariable int id, @RequestBody Film film) {
+        boolean filmAggiornato = service.aggiornaFilm(id, film);
+        if (filmAggiornato == true) 
+            return ResponseEntity.ok("Film aggiornato correttamente");
+        return ResponseEntity.notFound().build();
+    }
+
 }
