@@ -11,13 +11,15 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 
 public class ControllerFilm {
-   
+    
+    //creazione oggetto service e sua accesso tramite metodo public
     private final CatalogoFilmService service;
 
     public ControllerFilm (CatalogoFilmService service) {
         this.service = service;
     }
 
+    // metodo POST 
     @PostMapping
     public ResponseEntity<Film> postFilm (@RequestBody Film film){
         Film filmCreato = service.addFilm(film);
