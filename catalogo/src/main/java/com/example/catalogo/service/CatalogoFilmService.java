@@ -58,7 +58,7 @@ public class CatalogoFilmService {
     
     public Optional<Film> getFilmByTitolo(String tit) {   
     for (Film f : listaFilm) {                  
-        if (f.getTitolo() == tit) {
+        if (f.getTitolo().equals(tit)) {
             return Optional.of(f); 
         }
         }

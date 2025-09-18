@@ -48,7 +48,7 @@ public class ControllerFilm {
 
 
 
-    @GetMapping("cerca/{id}")
+    @GetMapping("/cerca/{id}")
     public ResponseEntity<Film> getById(@PathVariable int id) {
     return service.getFilmById(id)
                   .map(film -> ResponseEntity.ok(film)) 
@@ -63,7 +63,7 @@ public class ControllerFilm {
                   .orElse(ResponseEntity.notFound().build());
     }
 
-     @GetMapping("cercatitolo/{tit}")
+     @GetMapping("/titolo/{tit}")
     public ResponseEntity<Film> getByTitolo(@PathVariable String tit) {
     return service.getFilmByTitolo(tit)
                   .map(film -> ResponseEntity.ok(film)) 
