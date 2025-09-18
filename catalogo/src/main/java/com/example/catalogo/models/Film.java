@@ -34,15 +34,15 @@ public class Film {
         public void setGenere(String nuovoGenere){this.genere = nuovoGenere;}
 
 
-        @Override
-        public String toString() {  //Java applica di base il toString quindi bisogna sovrascriverlo per poter visualizzare il
-             return "Film{" +       //dati a proprio piacimento, al posto dell'hash code della posizione di memoria
-                    "id: " + id +
-                    ", titolo: '" + titolo + '\'' +
-                    ", regista: '" + regista + '\'' +
-                    ", anno: " + anno +
-                    ", genere: '" + genere + '\'' +
-                    '}';
-    }
+    //     @Override
+    //     public String toString() {  //Java applica di base il toString quindi bisogna sovrascriverlo per poter visualizzare il
+    //          return "Film{" +       //dati a proprio piacimento, al posto dell'hash code della posizione di memoria
+    //                 "id: " + id +
+    //                 ", titolo: '" + titolo + '\'' +
+    //                 ", regista: '" + regista + '\'' +
+    //                 ", anno: " + anno +
+    //                 ", genere: '" + genere + '\'' +
+    //                 '}';
+    // }
     
 }

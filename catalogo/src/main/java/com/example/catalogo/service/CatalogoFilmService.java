@@ -7,6 +7,9 @@ import java.util.Optional;
 import com.example.catalogo.models.Film;
 @Service
 public class CatalogoFilmService {
+
+    
+
      private final List<Film> listaFilm = new ArrayList<>();
     
     private int nextId = 1; //contatore degli id che parte da 1
@@ -39,28 +42,29 @@ public class CatalogoFilmService {
 
 
     
-    public boolean aggiornaFilm(int id, Film f){ //funzione per aggiornare
-         for (Film a : listaFilm){
-            if(a.getId() == id){
+    public Optional<Film> aggiornaFilm(int id, Film f) {
+        return listaFilm.stream()  //stream() inizializza una serie di operazini sulla lista quindi filter map ecc
+            .filter(a -> a.getId() == id)
+            .findFirst()
+            .map(a -> {
                 a.setTitolo(f.getTitolo());
                 a.setGenere(f.getGenere());
                 a.setAnno(f.getAnno());
                 a.setRegista(f.getRegista());
-                return true;
-            }
-
-         }return false;
+                return a; 
+        });
+}
 
     
-    }
+    public Optional<Film> getFilmByTitolo(String tit) {   
+    for (Film f : listaFilm) {                  
+        if (f.getTitolo() == tit) {
+            return Optional.of(f); 
+        }
+        }
+        return Optional.empty(); 
+    } 
 
-    public Film getByTitolo(String tit) {   // Ricerca per titolo
-      for (Film f : listaFilm) {
-          if (f.getTitolo().equalsIgnoreCase(tit)) {
-              return f; 
-          }
-      }
-      return null; // se non trova nessun film
 }
     
-}
+

@@ -37,16 +37,18 @@ public class ControllerFilm {
     public List<Film> getAllFilms() {
         return service.getAllFilms();
     }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<String> updateFilm(@PathVariable int id, @RequestBody Film film) {
-        boolean filmAggiornato = service.aggiornaFilm(id, film);
-        if (filmAggiornato == true) 
-            return ResponseEntity.ok("Film aggiornato correttamente");
-        return ResponseEntity.notFound().build();
+    
+    
+    @PutMapping("/aggiorna/{id}")
+    public ResponseEntity<Film> updateFilm(@PathVariable int id, @RequestBody Film film) {
+        return service.aggiornaFilm(id, film)
+                    .map(ResponseEntity::ok)
+                    .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/{id}")
+
+
+    @GetMapping("cerca/{id}")
     public ResponseEntity<Film> getById(@PathVariable int id) {
     return service.getFilmById(id)
                   .map(film -> ResponseEntity.ok(film)) 
@@ -57,8 +59,17 @@ public class ControllerFilm {
     @DeleteMapping("/cancella/{id}") //delete
     public ResponseEntity<Film> deleteFilm(@PathVariable int id) {
     return service.deleteById(id)
-                  .map(ResponseEntity::ok)
+                  .map(film -> ResponseEntity.ok(film))
                   .orElse(ResponseEntity.notFound().build());
-}
+    }
+
+     @GetMapping("cercatitolo/{tit}")
+    public ResponseEntity<Film> getByTitolo(@PathVariable String tit) {
+    return service.getFilmByTitolo(tit)
+                  .map(film -> ResponseEntity.ok(film)) 
+                  .orElse(ResponseEntity.notFound().build());
+
+    }
+
     
 }
